@@ -1,24 +1,4 @@
-# README
+# Refactoring Practice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This Rails app has been intentionally designed in a way that there are areas for
+improvement. It's your mission to find this places and refactor them.
