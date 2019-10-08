@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_103124) do
+ActiveRecord::Schema.define(version: 2019_10_08_113903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,25 @@ ActiveRecord::Schema.define(version: 2019_10_08_103124) do
   create_table "accounts", force: :cascade do |t|
     t.jsonb "github_auth"
     t.jsonb "twitter_auth"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "webhook_requests", force: :cascade do |t|
+    t.integer "webhook_id"
+    t.integer "status"
+    t.jsonb "headers"
+    t.text "body"
+    t.jsonb "exception"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "webhooks", force: :cascade do |t|
+    t.integer "account_id"
+    t.string "url"
+    t.text "payload"
+    t.jsonb "headers"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
