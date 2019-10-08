@@ -28,5 +28,9 @@ module RefactoringPractice
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.middleware.use OmniAuth::Builder do
+      provider :github, "dummy-github-key", "dummy-github-secret"
+      provider :twitter, "dummy-twitter-key", "dummy-twitter-secret"
+    end
   end
 end
